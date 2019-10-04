@@ -28,6 +28,7 @@ namespace ThanksCard
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.LogonUser.Views.LogonUser>();
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.LogonCopyright.Views.LogonCopyright>();
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.Help.Views.Help>();
+            containerRegistry.RegisterForNavigation<ThanksCard.Modules.ThanksCardList.Views.ThanksCardList>();
         }
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
@@ -38,6 +39,7 @@ namespace ThanksCard
             moduleCatalog.AddModule<CopyrightModule>(InitializationMode.WhenAvailable);
             moduleCatalog.AddModule<LogonCopyrightModule>(InitializationMode.WhenAvailable);
             moduleCatalog.AddModule<HelpModule>(InitializationMode.WhenAvailable);
+            moduleCatalog.AddModule<ThanksCardListModule>(InitializationMode.WhenAvailable);
         }
     }
 }

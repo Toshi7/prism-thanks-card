@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ThanksCard.ViewModels
+namespace ThanksCard.Modules.ThanksCardList.ViewModels
 {
-    public class HelpViewModel : BindableBase
+    public class ThanksCardListViewModel : BindableBase
     {
-        public HelpViewModel()
+        public ThanksCardListViewModel()
         {
 
         }

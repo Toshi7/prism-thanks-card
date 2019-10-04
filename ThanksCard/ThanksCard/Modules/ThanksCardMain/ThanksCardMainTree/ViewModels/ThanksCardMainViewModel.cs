@@ -28,6 +28,8 @@ namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree.ViewModels
         //public ICommand ShowThanksCardCreateCommand { get; private set; }
         public ReactiveCommand<RoutedPropertyChangedEventArgs<object>> ShowThanksCardCreateCommand { get; set; }
 
+        public ReactiveCommand<RoutedPropertyChangedEventArgs<object>> ShowThanksCardListCommand { get; set; }
+
         public ThanksCardMainViewModel(IRegionManager regionManager)
         {
             this._regionManager = regionManager;
@@ -37,17 +39,26 @@ namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree.ViewModels
 
             //ShowThanksCardCreateCommand = new DelegateCommand(Execute, canExecute);
             this.ShowThanksCardCreateCommand = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
-            this.ShowThanksCardCreateCommand.Subscribe(e => this.SelectedButton_MouseDown(e));
+            this.ShowThanksCardCreateCommand.Subscribe(e => this.SelectedCreateButton_MouseDown(e));
+            this.ShowThanksCardListCommand = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
+            this.ShowThanksCardListCommand.Subscribe(e => this.SelectedListButton_MouseDown(e));
 
         }
 
+
         void IDisposable.Dispose() { this.disposables.Dispose(); }
-        private void SelectedButton_MouseDown(RoutedPropertyChangedEventArgs<object> x)
+        private void SelectedCreateButton_MouseDown(RoutedPropertyChangedEventArgs<object> x)
         {
             System.Diagnostics.Debug.WriteLine("SelectedButton_MouseDown");
             //this._regionManager.RegisterViewWithRegion("ContentRegion", typeof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate));
             this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate), new NavigationParameters($"id=1"));
+        }
 
+        private void SelectedListButton_MouseDown(RoutedPropertyChangedEventArgs<object> e)
+        {
+            System.Diagnostics.Debug.WriteLine("SelectedButton_MouseDown");
+            //this._regionManager.RegisterViewWithRegion("ContentRegion", typeof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate));
+            this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardList.Views.ThanksCardList), new NavigationParameters($"id=1"));
         }
     }
 }
