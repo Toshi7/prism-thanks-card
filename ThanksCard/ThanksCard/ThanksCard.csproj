@@ -56,6 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Modules\Copyright\Views\Copyright.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\Help\Views\Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\LogonCopyright\Views\LogonCopyright.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Modules\LogonUser\Views\LogonUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +92,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Modules\Copyright\CopyrightModule.cs" />
+    <Compile Include="Modules\Copyright\ViewModels\CopyrightViewModel.cs" />
+    <Compile Include="Modules\Copyright\Views\Copyright.xaml.cs">
+      <DependentUpon>Copyright.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Help\HelpModule.cs" />
+    <Compile Include="Modules\Help\ViewModels\HelpViewModel.cs" />
+    <Compile Include="Modules\Help\Views\Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\LogonCopyright\LogonCopyrightModule.cs" />
+    <Compile Include="Modules\LogonCopyright\ViewModels\LogonCopyrightViewModel.cs" />
+    <Compile Include="Modules\LogonCopyright\Views\LogonCopyright.xaml.cs">
+      <DependentUpon>LogonCopyright.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modules\LogonUser\LogonUserModule.cs" />
     <Compile Include="Modules\LogonUser\ViewModels\LogonUserViewModels.cs" />
     <Compile Include="Modules\LogonUser\Views\LogonUser.xaml.cs">
@@ -100,7 +127,8 @@
     <Compile Include="Modules\ThanksCardMain\ThanksCardMainTree\Views\ThanksCardMain.xaml.cs">
       <DependentUpon>ThanksCardMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\LogonUserViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\LogonCopyrightViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

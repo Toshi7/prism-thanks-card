@@ -7,20 +7,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ThanksCard.Modules.Logon
+namespace ThanksCard.Modules.Copyright
 {
-    public class LogonModule : IModule
+    public class CopyrightModule : IModule
     {
         IRegionManager _regionManager;
 
-        public LogonModule(IRegionManager regionManager)
+        public CopyrightModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RegisterViewWithRegion("ContentRegion", typeof(Views.Logon));
+            _regionManager.RegisterViewWithRegion("FooterRegion", typeof(Views.Copyright));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

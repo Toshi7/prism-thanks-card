@@ -9,18 +9,18 @@ using System.Linq;
 
 namespace ThanksCard.Modules.Logon
 {
-    public class LogonModule : IModule
+    public class HelpModule : IModule
     {
         IRegionManager _regionManager;
 
-        public LogonModule(IRegionManager regionManager)
+        public HelpModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            _regionManager.RegisterViewWithRegion("ContentRegion", typeof(Views.Logon));
+
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

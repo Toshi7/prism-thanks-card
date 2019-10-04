@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ThanksCard.Modules.Help.Views.Help"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <TextBlock>
+            <Run Text="ThanksCard システムの使用方法" FontSize="19"/>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="扱い方1。。。"/>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="扱い方2。。。"/>
+        </TextBlock>
+    </Grid>
+</UserControl>

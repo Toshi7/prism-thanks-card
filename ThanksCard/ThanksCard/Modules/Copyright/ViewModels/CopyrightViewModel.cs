@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ThanksCard.ViewModels
+namespace ThanksCard.Modules.Copyright.ViewModels
 {
-    public class LogonUserViewModel : BindableBase
+    public class CopyrightViewModel : BindableBase
     {
-        public LogonUserViewModel()
+        public CopyrightViewModel()
         {
 
         }
