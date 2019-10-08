@@ -6,12 +6,7 @@
     <Grid>
         <TextBlock>
             <Run Text="© 2019 XXX Corporation" FontSize="10"/>
-            <!--<Hyperlink NavigateUri="http://www.google.com">
-                ヘルプ
-            </Hyperlink>
-            -->
-           <Hyperlink x:Name="help" Command="{Binding HelpCommand}">ヘルプ</Hyperlink>
-            <!--<Button Content="感謝カードを作成する" Command="{Binding HelpCommand}"/>-->
-         </TextBlock>
+            <Hyperlink x:Name="help" Command="{Binding HelpCommand}">ヘルプ</Hyperlink>
+        </TextBlock>
     </Grid>
 </UserControl>

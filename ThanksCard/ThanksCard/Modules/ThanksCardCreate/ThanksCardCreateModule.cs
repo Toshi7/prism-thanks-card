@@ -7,21 +7,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree
+namespace ThanksCard.Modules.ThanksCardCreate
 {
-    public class ThanksCardMainTreeModule : IModule
+    public class ThanksCardCreateModule : IModule
     {
 
         IRegionManager _regionManager;
 
-        public ThanksCardMainTreeModule(IRegionManager regionManager)
+        public ThanksCardCreateModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            //_regionManager.RegisterViewWithRegion("ContentRegion", typeof(Views.ThanksCardMain));
+
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

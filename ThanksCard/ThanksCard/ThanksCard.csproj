@@ -68,6 +68,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Modules\LogonMenu\Views\LogonMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Modules\LogonUser\Views\LogonUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,7 +80,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Modules\ThanksCardCreate\ThanksCardTree\Views\ThanksCardCreate.xaml">
+    <Page Include="Modules\ThanksCardCreate\Views\ThanksCardCreate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -84,7 +88,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Modules\ThanksCardMain\ThanksCardMainTree\Views\ThanksCardMain.xaml">
+    <Page Include="Modules\ThanksCardMain\Views\ThanksCardMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -111,6 +115,11 @@
     <Compile Include="Modules\LogonCopyright\Views\LogonCopyright.xaml.cs">
       <DependentUpon>LogonCopyright.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Modules\LogonMenu\LogonMenuModule.cs" />
+    <Compile Include="Modules\LogonMenu\ViewModels\LogonMenuViewModel.cs" />
+    <Compile Include="Modules\LogonMenu\Views\LogonMenu.xaml.cs">
+      <DependentUpon>LogonMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Modules\LogonUser\LogonUserModule.cs" />
     <Compile Include="Modules\LogonUser\ViewModels\LogonUserViewModels.cs" />
     <Compile Include="Modules\LogonUser\Views\LogonUser.xaml.cs">
@@ -121,9 +130,9 @@
     <Compile Include="Modules\Logon\Views\Logon.xaml.cs">
       <DependentUpon>Logon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Modules\ThanksCardCreate\ThanksCardTree\ThanksCardCreateTreeModule.cs" />
-    <Compile Include="Modules\ThanksCardCreate\ThanksCardTree\ViewModels\ThanksCardCreateViewModel.cs" />
-    <Compile Include="Modules\ThanksCardCreate\ThanksCardTree\Views\ThanksCardCreate.xaml.cs">
+    <Compile Include="Modules\ThanksCardCreate\ThanksCardCreateModule.cs" />
+    <Compile Include="Modules\ThanksCardCreate\ViewModels\ThanksCardCreateViewModel.cs" />
+    <Compile Include="Modules\ThanksCardCreate\Views\ThanksCardCreate.xaml.cs">
       <DependentUpon>ThanksCardCreate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modules\ThanksCardList\ThanksCardListModule.cs" />
@@ -131,9 +140,9 @@
     <Compile Include="Modules\ThanksCardList\Views\ThanksCardList.xaml.cs">
       <DependentUpon>ThanksCardList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Modules\ThanksCardMain\ThanksCardMainTree\ThanksCardMainTreeModule.cs" />
-    <Compile Include="Modules\ThanksCardMain\ThanksCardMainTree\ViewModels\ThanksCardMainViewModel.cs" />
-    <Compile Include="Modules\ThanksCardMain\ThanksCardMainTree\Views\ThanksCardMain.xaml.cs">
+    <Compile Include="Modules\ThanksCardMain\ThanksCardMainModule.cs" />
+    <Compile Include="Modules\ThanksCardMain\ViewModels\ThanksCardMainViewModel.cs" />
+    <Compile Include="Modules\ThanksCardMain\Views\ThanksCardMain.xaml.cs">
       <DependentUpon>ThanksCardMain.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />

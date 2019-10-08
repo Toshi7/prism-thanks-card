@@ -7,14 +7,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ThanksCard.Modules.ThanksCardCreate.ThanksCardTree
+namespace ThanksCard.Modules.ThanksCardMain
 {
-    public class ThanksCardCreateTreeModule : IModule
+    public class ThanksCardMainModule : IModule
     {
 
         IRegionManager _regionManager;
 
-        public ThanksCardCreateTreeModule(IRegionManager regionManager)
+        public ThanksCardMainModule(IRegionManager regionManager)
         {
             _regionManager = regionManager;
         }

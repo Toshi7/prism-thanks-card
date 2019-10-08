@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ThanksCard.Modules.LogonMenu.Views.LogonMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <TextBlock>
+            <!--<Hyperlink NavigateUri="http://www.google.com">
+                ヘルプ
+            </Hyperlink>
+            -->
+           <Hyperlink x:Name="home" Command="{Binding HomeCommand}">ホーム</Hyperlink>
+           <Hyperlink x:Name="createCard" Command="{Binding ThanksCardCreateCommand}">感謝カードを作成する</Hyperlink>
+           <Hyperlink x:Name="userMaster" Command="{Binding UserMstCommand}">ユーザのマスタメンテ画面を開く</Hyperlink>
+           <Hyperlink x:Name="departmentMaster" Command="{Binding DepartmentMstCommand}">部署のマスタメンテ画面を開く</Hyperlink>
+                        
+            <!--<Button Content="感謝カードを作成する" Command="{Binding HelpCommand}"/>-->
+        </TextBlock>
+    </Grid>
+</UserControl>

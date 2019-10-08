@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 
-namespace ThanksCard.Modules.ThanksCardCreate.ThanksCardTree.ViewModels
+namespace ThanksCard.Modules.ThanksCardCreate.ViewModels
 {
     public class ThanksCardCreateViewModel : BindableBase, IDisposable
     {
@@ -21,20 +21,11 @@ namespace ThanksCard.Modules.ThanksCardCreate.ThanksCardTree.ViewModels
 
         private IRegionManager _regionManager;
         private System.Reactive.Disposables.CompositeDisposable disposables = new System.Reactive.Disposables.CompositeDisposable();
-
-        //public DelegateCommand ShowThanksCardCreateCommand { get; private set; }
-
-        //public ICommand ShowThanksCardCreateCommand { get; private set; }
         public ReactiveCommand<RoutedPropertyChangedEventArgs<object>> CancelCommand { get; set; }
 
         public ThanksCardCreateViewModel(IRegionManager regionManager)
         {
-            this._regionManager = regionManager;
-            //Message = "View A from your Prism Module";
-            //this.SelectedButtonMouseDown = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
-            //this.SelectedButtonMouseDown.Subscribe(e => this.SelectedButton_MouseDown(e));
-
-            //ShowThanksCardCreateCommand = new DelegateCommand(Execute, canExecute);
+            this._regionManager = regionManager;         
             this.CancelCommand = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
             this.CancelCommand.Subscribe(e => this.SelectedCancel_Button_MouseDown(e));
 
@@ -43,8 +34,7 @@ namespace ThanksCard.Modules.ThanksCardCreate.ThanksCardTree.ViewModels
         void IDisposable.Dispose() { this.disposables.Dispose(); }
         private void SelectedCancel_Button_MouseDown(RoutedPropertyChangedEventArgs<object> x)
         {
-            //this._regionManager.RegisterViewWithRegion("ContentRegion", typeof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate));
-            this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardMain.ThanksCardMainTree.Views.ThanksCardMain), new NavigationParameters($"id=1"));
+            this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardList.Views.ThanksCardList), new NavigationParameters($"id=1"));
         }
     }
 }

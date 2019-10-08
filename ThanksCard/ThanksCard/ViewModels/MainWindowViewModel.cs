@@ -18,6 +18,5 @@ namespace ThanksCard.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-
     }
 }

@@ -4,7 +4,6 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <!--<p>Copyright &copy; chot.design</p>-->
         <TextBlock Text="© 2019 XXX Corporation" FontSize="10" />
     </Grid>
 </UserControl>

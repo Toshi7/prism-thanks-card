@@ -23,19 +23,11 @@ namespace ThanksCard.Modules.Logon.ViewModels
         private IRegionManager _regionManager;
         private System.Reactive.Disposables.CompositeDisposable disposables = new System.Reactive.Disposables.CompositeDisposable();
 
-        //public DelegateCommand ShowThanksCardCreateCommand { get; private set; }
-
-        //public ICommand ShowThanksCardCreateCommand { get; private set; }
         public ReactiveCommand<RoutedPropertyChangedEventArgs<object>> LogonCommand { get; set; }
 
         public LogonViewModel(IRegionManager regionManager)
         {
             this._regionManager = regionManager;
-            //Message = "View A from your Prism Module";
-            //this.SelectedButtonMouseDown = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
-            //this.SelectedButtonMouseDown.Subscribe(e => this.SelectedButton_MouseDown(e));
-
-            //ShowThanksCardCreateCommand = new DelegateCommand(Execute, canExecute);
             this.LogonCommand = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
             this.LogonCommand.Subscribe(e => this.SelectedButton_MouseDown(e));
 
@@ -44,10 +36,10 @@ namespace ThanksCard.Modules.Logon.ViewModels
         void IDisposable.Dispose() { this.disposables.Dispose(); }
         private void SelectedButton_MouseDown(RoutedPropertyChangedEventArgs<object> x)
         {
-            //this._regionManager.RegisterViewWithRegion("ContentRegion", typeof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate));
-            this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardMain.ThanksCardMainTree.Views.ThanksCardMain), new NavigationParameters($"id=1"));
+            this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardList.Views.ThanksCardList), new NavigationParameters($"id=1"));
             this._regionManager.RequestNavigate("HeaderRegion", nameof(LogonUser.Views.LogonUser), new NavigationParameters($"id=1"));
             this._regionManager.RequestNavigate("FooterRegion", nameof(LogonCopyright.Views.LogonCopyright), new NavigationParameters($"id=1"));
+            this._regionManager.RequestNavigate("MenuRegion", nameof(LogonMenu.Views.LogonMenu), new NavigationParameters($"id=1"));
         }
     }
 }

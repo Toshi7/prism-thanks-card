@@ -5,13 +5,13 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
         <TextBlock>
-            <Run Text="ThanksCard システムの使用方法" FontSize="19"/>
+            <Run Text="ThanksCard システムの操作ガイド" FontSize="19"/>
             <LineBreak/>
             <LineBreak/>
-            <Run Text="扱い方1。。。"/>
+            <Run Text="はじめに"/>
             <LineBreak/>
             <LineBreak/>
-            <Run Text="扱い方2。。。"/>
+            <Run Text="一般ユーザ向け機能"/>
         </TextBlock>
     </Grid>
 </UserControl>

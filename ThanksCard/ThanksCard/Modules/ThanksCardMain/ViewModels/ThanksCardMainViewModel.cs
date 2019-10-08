@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 
-namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree.ViewModels
+namespace ThanksCard.Modules.ThanksCardMain.ViewModels
 
 {
     public class ThanksCardMainViewModel : BindableBase, IDisposable
@@ -22,10 +22,6 @@ namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree.ViewModels
 
         private IRegionManager _regionManager;
         private System.Reactive.Disposables.CompositeDisposable disposables = new System.Reactive.Disposables.CompositeDisposable();
-
-        //public DelegateCommand ShowThanksCardCreateCommand { get; private set; }
-
-        //public ICommand ShowThanksCardCreateCommand { get; private set; }
         public ReactiveCommand<RoutedPropertyChangedEventArgs<object>> ShowThanksCardCreateCommand { get; set; }
 
         public ReactiveCommand<RoutedPropertyChangedEventArgs<object>> ShowThanksCardListCommand { get; set; }
@@ -33,11 +29,6 @@ namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree.ViewModels
         public ThanksCardMainViewModel(IRegionManager regionManager)
         {
             this._regionManager = regionManager;
-            //Message = "View A from your Prism Module";
-            //this.SelectedButtonMouseDown = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
-            //this.SelectedButtonMouseDown.Subscribe(e => this.SelectedButton_MouseDown(e));
-
-            //ShowThanksCardCreateCommand = new DelegateCommand(Execute, canExecute);
             this.ShowThanksCardCreateCommand = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
             this.ShowThanksCardCreateCommand.Subscribe(e => this.SelectedCreateButton_MouseDown(e));
             this.ShowThanksCardListCommand = new ReactiveCommand<System.Windows.RoutedPropertyChangedEventArgs<object>>().AddTo(this.disposables);
@@ -50,14 +41,12 @@ namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree.ViewModels
         private void SelectedCreateButton_MouseDown(RoutedPropertyChangedEventArgs<object> x)
         {
             System.Diagnostics.Debug.WriteLine("SelectedButton_MouseDown");
-            //this._regionManager.RegisterViewWithRegion("ContentRegion", typeof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate));
-            this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate), new NavigationParameters($"id=1"));
+            this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardCreate.Views.ThanksCardCreate), new NavigationParameters($"id=1"));
         }
 
         private void SelectedListButton_MouseDown(RoutedPropertyChangedEventArgs<object> e)
         {
             System.Diagnostics.Debug.WriteLine("SelectedButton_MouseDown");
-            //this._regionManager.RegisterViewWithRegion("ContentRegion", typeof(ThanksCardCreate.ThanksCardTree.Views.ThanksCardCreate));
             this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardList.Views.ThanksCardList), new NavigationParameters($"id=1"));
         }
     }

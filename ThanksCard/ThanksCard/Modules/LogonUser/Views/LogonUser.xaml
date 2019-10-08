@@ -4,7 +4,6 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <!---<TextBlock Text="{Binding AuthorizedUser.Name, StringFormat=ログオン中のユーザ: {0} }" HorizontalAlignment="Right"/>-->
         <TextBlock Text="ログオン中のユーザ: 太郎" FontSize="19" />
     </Grid>
 </UserControl>

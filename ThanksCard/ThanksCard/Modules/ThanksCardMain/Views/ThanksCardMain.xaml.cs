@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace ThanksCard.Modules.ThanksCardMain.ThanksCardMainTree.Views
+namespace ThanksCard.Modules.ThanksCardMain.Views
 {
     /// <summary>
     /// Interaction logic for ThanksCardCreate.xaml
