@@ -21,6 +21,9 @@ namespace ThanksCard.Modules.Logon
         public void OnInitialized(IContainerProvider containerProvider)
         {
             _regionManager.RegisterViewWithRegion("ContentRegion", typeof(Views.Logon));
+            //var regionMan = containerProvider.Resolve<IRegionManager>();
+            //regionMan.RegisterViewWithRegion("ContentRegion", typeof(Views.Logon));
+            _regionManager.RegisterViewWithRegion("RegionOnRegion", typeof(Views.Logon));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

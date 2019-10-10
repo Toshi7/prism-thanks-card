@@ -36,10 +36,12 @@ namespace ThanksCard.Modules.Logon.ViewModels
         void IDisposable.Dispose() { this.disposables.Dispose(); }
         private void SelectedButton_MouseDown(RoutedPropertyChangedEventArgs<object> x)
         {
+            this._regionManager.RequestNavigate("RegionOnRegion", nameof(LogonMenu.Views.LogonMenu), new NavigationParameters($"id=1"));
             this._regionManager.RequestNavigate("ContentRegion", nameof(ThanksCardList.Views.ThanksCardList), new NavigationParameters($"id=1"));
             this._regionManager.RequestNavigate("HeaderRegion", nameof(LogonUser.Views.LogonUser), new NavigationParameters($"id=1"));
             this._regionManager.RequestNavigate("FooterRegion", nameof(LogonCopyright.Views.LogonCopyright), new NavigationParameters($"id=1"));
             this._regionManager.RequestNavigate("MenuRegion", nameof(LogonMenu.Views.LogonMenu), new NavigationParameters($"id=1"));
+
         }
     }
 }

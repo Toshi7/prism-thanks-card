@@ -26,7 +26,7 @@ namespace ThanksCard
         {
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.ThanksCardCreate.Views.ThanksCardCreate>();
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.ThanksCardMain.Views.ThanksCardMain>();
-            //containerRegistry.RegisterForNavigation<ThanksCard.Modules.LogonUser.Views.LogonUser>();
+            containerRegistry.RegisterForNavigation<ThanksCard.Modules.LogonUser.Views.LogonUser>();
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.LogonMenu.Views.LogonMenu>();
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.LogonCopyright.Views.LogonCopyright>();
             containerRegistry.RegisterForNavigation<ThanksCard.Modules.Help.Views.Help>();

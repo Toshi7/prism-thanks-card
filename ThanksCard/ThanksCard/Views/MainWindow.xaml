@@ -9,7 +9,7 @@
             <ContentControl prism:RegionManager.RegionName="HeaderRegion" />
             <ContentControl prism:RegionManager.RegionName="MenuRegion" />
             <ContentControl prism:RegionManager.RegionName="ContentRegion" />
-            <ContentControl prism:RegionManager.RegionName="FooterRegion" />            
+            <ContentControl prism:RegionManager.RegionName="FooterRegion" />
         </StackPanel>
     </Grid>
 </Window>
